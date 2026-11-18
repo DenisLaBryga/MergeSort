@@ -65,3 +65,13 @@ TEST(MergeSortTest, PustaTablica) {
 TEST(MergeSortTest, JedenElement) {
     sprawdz({ 42 });
 }
+
+/** @brief Tablica z duplikatami zostaje poprawnie posortowana. */
+TEST(MergeSortTest, Duplikaty) {
+    sprawdz({ 3, 1, 3, 2, 1, 2, 3 });
+}
+
+/** @brief Tablica z liczbami ujemnymi i duplikatami zostaje poprawnie posortowana. */
+TEST(MergeSortTest, UjemneZDuplikatami) {
+    sprawdz({ -2, -5, -2, -8, -5, -8, -2 });
+}
