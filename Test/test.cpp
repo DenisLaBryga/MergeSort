@@ -33,3 +33,22 @@ TEST(MergeSortTest, JuzPosortowanaRosnaco) {
 TEST(MergeSortTest, PosortowanaMalejaco) {
     sprawdz({ 5, 4, 3, 2, 1 });
 }
+
+/** @brief Losowa tablica liczb zostaje poprawnie posortowana. */
+TEST(MergeSortTest, LosowaTablica) {
+    vector<int> tab;
+    for (int i = 0; i < 20; i++) {
+        tab.push_back(rand() % 100);
+    }
+    sprawdz(tab);
+}
+
+/** @brief Tablica z samymi liczbami ujemnymi zostaje poprawnie posortowana. */
+TEST(MergeSortTest, TylkoUjemne) {
+    sprawdz({ -3, -10, -1, -7, -5 });
+}
+
+/** @brief Tablica z liczbami ujemnymi i dodatnimi zostaje poprawnie posortowana. */
+TEST(MergeSortTest, UjemneIDodatnie) {
+    sprawdz({ 4, -2, 7, -9, 0, 3, -1 });
+}
