@@ -52,3 +52,16 @@ TEST(MergeSortTest, TylkoUjemne) {
 TEST(MergeSortTest, UjemneIDodatnie) {
     sprawdz({ 4, -2, 7, -9, 0, 3, -1 });
 }
+
+/** @brief Pusta tablica jest obs³ugiwana bez rzucania wyj¹tku. */
+TEST(MergeSortTest, PustaTablica) {
+    vector<int> tab;
+    MergeSort<int> ms;
+    EXPECT_NO_THROW(ms.sortuj(tab));
+    EXPECT_TRUE(tab.empty());
+}
+
+/** @brief Tablica z jednym elementem pozostaje niezmieniona. */
+TEST(MergeSortTest, JedenElement) {
+    sprawdz({ 42 });
+}
