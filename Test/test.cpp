@@ -14,6 +14,7 @@ using namespace std;
  * @param tab Tablica do przetestowania (przekazana przez kopiê).
  */
 void sprawdz(vector<int> tab) {
+
     vector<int> oczekiwana = tab;
     sort(oczekiwana.begin(), oczekiwana.end());
 
@@ -21,4 +22,14 @@ void sprawdz(vector<int> tab) {
     ms.sortuj(tab);
 
     EXPECT_EQ(tab, oczekiwana);
+}
+
+/** @brief Tablica ju¿ posortowana rosn¹co pozostaje niezmieniona. */
+TEST(MergeSortTest, JuzPosortowanaRosnaco) {
+    sprawdz({ 1, 2, 3, 4, 5 });
+}
+
+/** @brief Tablica posortowana w odwrotnej kolejnoœci zostaje poprawnie posortowana. */
+TEST(MergeSortTest, PosortowanaMalejaco) {
+    sprawdz({ 5, 4, 3, 2, 1 });
 }
