@@ -6,7 +6,7 @@
 #include <vector>
 #include <algorithm>
 #include <cstdlib>
-#include "../MergeSort.h"   // popraw œcie¿kê do swojego projektu
+#include "../MergeSort.h"   
 using namespace std;
 
 /**
