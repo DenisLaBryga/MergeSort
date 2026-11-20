@@ -75,3 +75,22 @@ TEST(MergeSortTest, Duplikaty) {
 TEST(MergeSortTest, UjemneZDuplikatami) {
     sprawdz({ -2, -5, -2, -8, -5, -8, -2 });
 }
+
+/** @brief Tablica z liczbami ujemnymi, dodatnimi i duplikatami zostaje poprawnie posortowana. */
+TEST(MergeSortTest, UjemneDodatnieIDuplikaty) {
+    sprawdz({ 5, -3, 5, 0, -3, 8, -1, 8, 0 });
+}
+
+/** @brief Tablica z dwoma elementami w kolejnoœci rosn¹cej zostaje poprawnie obs³u¿ona. */
+TEST(MergeSortTest, DwaElementyRosnaco) {
+    sprawdz({ 1, 2 });
+}
+
+/** @brief Du¿a tablica (ponad 100 elementów) zostaje poprawnie posortowana. */
+TEST(MergeSortTest, DuzaTablica) {
+    vector<int> tab;
+    for (int i = 0; i < 150; i++) {
+        tab.push_back(rand() % 1000);
+    }
+    sprawdz(tab);
+}
