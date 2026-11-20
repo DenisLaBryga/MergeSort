@@ -94,3 +94,12 @@ TEST(MergeSortTest, DuzaTablica) {
     }
     sprawdz(tab);
 }
+
+/** @brief Du¿a tablica (ponad 100 elementów) z liczbami ujemnymi, dodatnimi i duplikatami. */
+TEST(MergeSortTest, DuzaTablicaUjemneDodatnieDuplikaty) {
+    vector<int> tab;
+    for (int i = 0; i < 150; i++) {
+        tab.push_back(rand() % 101 - 50);   // liczby od -50 do 50, przy 150 elementach bêd¹ duplikaty
+    }
+    sprawdz(tab);
+}
